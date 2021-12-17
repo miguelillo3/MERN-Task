@@ -16,7 +16,7 @@ app.use(cors());
 app.use( express.json( { extended: true } ) );
 
 // app PORT
-const port = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 //Importing routes
 app.use('/api/users', require('./routes/users'));
@@ -30,7 +30,7 @@ app.get('/',(req, res) => {
 });
 
 //Start app
-app.listen(port, '0.0.0.0', () =>{
-    console.log(`The server is running at port: ${port}`);
+app.listen(PORT, '0.0.0.0', () =>{
+    console.log(`The server is running at port: ${PORT}`);
 });
   
